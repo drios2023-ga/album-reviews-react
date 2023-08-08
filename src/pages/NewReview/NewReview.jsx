@@ -71,7 +71,7 @@ export default function NewReview({getAllReviews}){
 
                 <div className="line-item">
                     Review
-                    <input
+                    <textarea
                         type="text"
                         name="review"
                         onChange={handleChange}

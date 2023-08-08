@@ -72,7 +72,7 @@ export default function EditReview({getAllReviews}){
           </div>
           <div className="line-item">
             <label>Review: </label>
-            <input
+            <textarea
               type="text"
               name="review"
               defaultValue={review.review}
