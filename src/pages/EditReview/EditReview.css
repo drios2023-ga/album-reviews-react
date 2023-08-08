@@ -1,0 +1,11 @@
+.form-contents{
+    font-family: 'Caveat', cursive;
+    font-size: xx-large;
+    display:inline-block;
+    padding: 15px;
+}
+
+.line-item {
+    display: grid;
+    margin: 0 0 0 20px;
+}

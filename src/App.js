@@ -30,8 +30,8 @@ export default function App(){
     <Routes>
       {/* route components in here */}
       <Route path="/" element={<ReviewsList reviews={reviews} />} />
-      <Route path="/:id/update" element={<EditReview />}/>
-      <Route path="/new" element={<NewReview />}/>
+      <Route path="/:id/update" element={<EditReview getAllReviews={getAllReviews}/>}/>
+      <Route path="/new" element={<NewReview getAllReviews={getAllReviews}/>}/>
     </Routes>
   </>
 

@@ -1,8 +1,9 @@
-//import dayjs from "dayjs";
-import { useState, useEffect } from "react";
+import dayjs from "dayjs"; //date formatting library
+
+import { useEffect } from "react";
 import { Link, useParams } from 'react-router-dom';
 import album from '../../static/img/album.png'
-//import { getOneReview } from "../../utilities/reviews-api";
+import "./ReviewCard.css";
 
 export default function ReviewCard({
     id,
@@ -14,7 +15,6 @@ export default function ReviewCard({
     key
 }){
 
-  //const [currentReview, setCurrentReview] = useState();
   let { AlbumId } = useParams();
 
   useEffect(()=>{
@@ -23,17 +23,20 @@ export default function ReviewCard({
 
     return(
       <li>
-        <div>
-          <Link to={"/"+id + "/update"} >
-            <div><img src={album} /></div>
-          </Link>
+        <div className="card-container">
           <div>
-            <div>id: {id}</div>
-            <div>Album: {title}</div>
-            <div>Artist: {artist}</div>
-            <div>Date: {reviewDate}</div>
-            <div>{review}</div>
-          </div>
+            <Link to={"/"+id + "/update"} >
+              <div><img src={album} /></div>
+            </Link>
+            </div>            
+            <div className="li-elements">
+              {/* <div>id: {id}</div> */}
+              <div>Album: {title}</div>
+              <div>Artist: {artist}</div>
+              <div>Date: {dayjs(reviewDate).format("MM/DD/YYYY")}</div>
+              <div>{review}</div>
+            </div>
+
         </div>
       </li>
     

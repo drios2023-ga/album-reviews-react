@@ -1,0 +1,32 @@
+.nav-contents{
+    text-align: center;
+    width: 100%;
+    font-family: 'Caveat', cursive;
+    font-size: xx-large;
+}
+
+a:link{
+    color:#595959;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited{
+    color:#595959;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover{
+    color:#A5A5A5;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:active {
+    color: #F2F2F2;
+    background-color: transparent;
+    text-decoration: none;
+ }
+
+

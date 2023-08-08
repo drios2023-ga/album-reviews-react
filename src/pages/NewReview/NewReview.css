@@ -1,0 +1,41 @@
+.form-contents{
+    font-family: 'Caveat', cursive;
+    font-size: xx-large;
+    display:inline-block;
+    padding: 15px;
+}
+
+h2 {
+    font-family: 'Caveat', cursive;
+    font-size: xx-large; 
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    resize: horizontal;    
+}
+
+input:active {
+    width: auto;   
+}
+
+input:focus {
+    min-width: 200px;
+}
+
+
+
+
+label {
+    float: left;
+}
+
+.line-item {
+    display: grid;
+    margin: 0 0 0 20px;
+}
+
+.submit-button {
+    margin: 35px;
+}

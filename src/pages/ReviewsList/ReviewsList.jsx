@@ -1,5 +1,6 @@
 import ReviewCard from "../../components/ReviewCard/ReviewCard"
 
+//here we simply map the reviews object from app.js to ReviewCard
 export default function ReviewsList({reviews}){
     return(
       <div>
