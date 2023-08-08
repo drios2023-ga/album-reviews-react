@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import ReviewsList from "./pages/ReviewsList/ReviewsList";
+import EditReview from "./pages/EditReview/EditReview";
+import NewReview from "./pages/NewReview/NewReview";
+import { getReviews } from "./utilities/reviews-service";
+import NavBar from "./components/NavBar/NavBar";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App(){
+
+  const [reviews, setReviews] = useState([]);
+
+  const getAllReviews = async () => {
+    const response = await getReviews();
+    setReviews(response)
+  }
+
+  useEffect(()=>{
+
+    getAllReviews();
+
+  }, [])
+
+  return(
+    <main className="App">
+    <>
+
+    {/* <p>Hello </p> */}
+    <NavBar></NavBar>
+    <Routes>
+      {/* route components in here */}
+      <Route path="/" element={<ReviewsList reviews={reviews} />} />
+      <Route path="/:id/update" element={<EditReview />}/>
+      <Route path="/new" element={<NewReview />}/>
+    </Routes>
+  </>
+
+  </main>
+  )
 }
-
-export default App;
