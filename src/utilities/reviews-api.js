@@ -1,6 +1,6 @@
 import sendRequest from './send-request';
 //const BASE_URL = '/albums'
-const BASE_URL = 'http://localhost:8080/albums';
+const BASE_URL = 'https://album-reviews-7bc46722d23a.herokuapp.com/albums';
 
 export async function getReviews() {
   return sendRequest(BASE_URL);

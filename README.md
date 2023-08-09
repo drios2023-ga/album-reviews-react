@@ -1,13 +1,47 @@
+# Deploying the project
+
+## Backend Deployment
+
+### Confirm application.properties is in the correct location
+
+Put application.properties fiile in src/main/resource so the app will find it
+
+### Replace spring.datasource.url
+
+In the same file, replace spring.datasource.url (that you used for local user, localhost) with spring.datasource.url=${DATABASE_URL}.
+
+### Deploy the backend
+
+Push all changes to github, then execute git push heroku main. It should build successfully and an app should be created.
+
+### Add postresql add-on
+
+Add this add-on so you have a database to interact with.
+
+## Front End Deployment
+
+### Take the front end url and replace the localhost url in reviews-api.js
+
+### _redirects file
+
+Create a file called _redirects in the Public folder of the front end project and put "/*    /index.html   200" inside of it as the only content (without the quotation marks).
+
+### Deploy to netlify
+
+\- Type npm run build (may need to use sudo)
+
+\- Type npm install netlify-cli -g (may need to use sudo)
+
+\- type netlify deploy (may need to use sudo)
+
+https://www.netlify.com/blog/2016/07/22/deploy-react-apps-in-less-than-30-seconds/
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
-
-
-### `Creating a react app`
-
-Run "npx create-react-app ." while cd'ed into the folder into which you want the app to exist. 
 
 In the project directory, you can run:
 
