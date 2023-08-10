@@ -2,6 +2,8 @@
 
 ## Backend Deployment
 
+### Add java.runtime.version=20 to systems.properties file
+
 ### Confirm application.properties is in the correct location
 
 Put application.properties fiile in src/main/resource so the app will find it
